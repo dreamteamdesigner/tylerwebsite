@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>12-Hour Persistent Element Demo</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 2rem;
+    }
+    #btnCreate {
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      background: #ff4757;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #btnCreate:hover { background: #e84118; }
+  </style>
+</head>
+<body>
+  <h2>12-Hour Persistent Element Demo</h2>
+  <button id="btnCreate">Create special element</button>
+
+  <script>
+    // ======= CONFIGURATION =======
+    const STORAGE_KEY = "persistentElement";
+    const TTL_MS = 12 * 60 * 60 * 1000; // 12 hours
+
+    // ======= CREATE & STORE =======
+    function createElement() {
+      // Avoid duplicates if it already exists on screen
+      if (document.getElementById("specialBox")) return;
+
+      const el = document.createElement("div");
+      el.id = "specialBox";
+      el.textContent = "👋 Hi! I will stay here for 12 hours.";
+      Object.assign(el.style, {
+        padding: "12px",
+        marginTop: "20px",
+        background: "lightgreen",
+        borderRadius: "8px",
+        fontWeight: "600",
+      });
+
+      document.body.appendChild(el);
+
+      // Persist element markup + timestamp
+      const payload = {
+        html: el.outerHTML,
+        timestamp: Date.now(),
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+    }
+
+    // ======= RESTORE ON PAGE LOAD =======
+    function restoreElement() {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;                       // Nothing stored
+
+      const { html, timestamp } = JSON.parse(raw);
+      if (Date.now() - timestamp > TTL_MS) {   // Expired
+        localStorage.removeItem(STORAGE_KEY);
+        return;
+      }
+
+      // Still valid -- recreate the element
+      const wrapper = document.createElement("div");
+      wrapper.innerHTML = html;
+      const restored = wrapper.firstElementChild;
+      // Only append if it isn't already present (prevents dupes)
+      if (!document.getElementById(restored.id)) {
+        document.body.appendChild(restored);
+      }
+    }
+
+    // ======= INIT =======
+    document
+      .getElementById("btnCreate")
+      .addEventListener("click", createElement);
+
+    // Rehydrate as soon as DOM is ready
+    document.addEventListener("DOMContentLoaded", restoreElement);
+  </script>
+</body>
+</html>
