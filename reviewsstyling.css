@@ -1,0 +1,292 @@
+.reviews-background{
+    place-content: center;
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column;
+    gap: 30px;
+    height: min-content;
+    max-width: 100%;
+    overflow: visible;
+    padding: 60px;
+    position: relative;
+    width: 100%;
+}
+.reviews-container{
+    place-content: flex-start center;
+    align-items: flex-start;
+    border-radius: 12px;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column;
+    gap: 32px;
+    height: min-content;
+    max-width: 1000px;
+    overflow: visible;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    will-change: var(none, transform);
+}
+.reviews-body{
+    /* flex: 0 0 auto; */
+    height: auto;
+    position: relative;
+    width: 100%;
+
+}
+.plater{
+    width: 100%;
+    color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 0px;
+    box-sizing: border-box;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 15px;
+    font-style: normal;
+    /* font-weight: 500; */
+    letter-spacing: -0.01em;
+    line-height: 1.3em;
+}
+.plater form{
+    width: 100%;
+    /* background-color: rgb(255, 125, 125); */
+    color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.3em;
+}
+.sec{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: visible;
+}
+
+.cds{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 12px;
+    height: min-content;
+}
+.star-rating {
+  direction: rtl; /* Right-to-left for proper star order */
+  /* display: inline-flex; */
+  font-size: 1.3rem;
+  user-select: none;
+}
+
+.star-rating input {
+  display: none; /* Hide radio inputs */
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+    transition: color .4s cubic-bezier(.44,0,.56,1) 0s;
+}
+
+/* Highlight on hover */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: rgb(255, 0, 0);
+}
+
+/* Highlight selected stars */
+.star-rating input:checked ~ label {
+  color: rgb(255, 0, 0);
+}
+
+
+.sec input{
+    /* width: 400px; */
+    height: 40px;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #290000;
+    outline: 0px solid #ff00005c;
+    font-size: 14px;
+    color: white;
+    line-height: 1.2em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid #290000;
+    transition: color .4s cubic-bezier(.44,0,.56,1) 0s;
+    transition: outline linear 100ms;
+}
+.sec input:focus{
+    outline: 4px solid hsla(0, 100%, 50%, 0.4);
+    border: 1px solid #ff0000;
+}
+.sec input:hover{
+    outline: 4px solid hsla(0, 100%, 50%, 0.4);
+}
+
+.sec textarea{
+    /* width: 400px; */
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #290000;
+    outline: none;
+    font-size: 14px;
+    min-height: 100px;
+    color: white;
+    line-height: 1.2em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: outline linear 100ms;
+    border: 1px solid #290000;
+    transition: color .4s cubic-bezier(.44,0,.56,1) 0s;
+}
+.sec textarea:focus{
+    outline: 4px solid hsla(0, 100%, 50%, 0.4);
+    border: 1px solid #ff0000;
+}
+.sec textarea:hover{
+    outline: 4px solid hsla(0, 100%, 50%, 0.4);
+}
+
+.sort-by-container{
+    display: flex;
+    height: min-content;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+select{
+    background-color: hsl(0, 100%, 20%);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: white;
+    padding: 0 12px;
+    transition: color .4s cubic-bezier(.44,0,.56,1) 0s;
+    height: 40px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+select:hover{
+    background-color: hsl(0, 100%, 33%);
+}
+.reviews-history{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.review{
+    background-color: #290000;
+    height: min-content;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    transition: color .4s cubic-bezier(.44,0,.56,1) 0s;
+    gap: 16px;
+}
+.review:hover{
+    background-color: hsl(0, 100%, 12%);
+}
+.review:hover~.review-info span{
+    color: white;
+}
+.top-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+.lefty{
+    display: flex;
+    height: min-content;
+    align-items: start;
+    gap: 12px;
+}
+.user-dp{
+    height: 40px;
+    width: 40px;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(14, 196, 132);
+}
+.user-name{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.righty{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.small-email{
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, 0.5);
+}
+.nnh{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.time-of-review{
+    font-size: 14px;
+    color: hsla(0, 0%, 100%, 0.5);
+}
+.review-info{
+    font-weight: 300;
+    color: #ccc;
+}
+.contents-rev{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 20px;
+
+}
+.load-more-button-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: min-content;
+}
+label button{
+    background-color: hsla(0, 100%, 50%, 0.197);
+    height: 40px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: rgb(255, 0, 0);
+    font-weight: 400;
+    transition: color .4s cubic-bezier(.44,0,.56,1) 0s;
+    cursor: pointer;
+    text-wrap: nowrap;
+    width: min-content;
+    user-select: none;
+}
+
+label button:hover{
+    background-color: hsla(0, 100%, 50%, 0.097);
+}
