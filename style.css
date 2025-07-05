@@ -1805,5 +1805,23 @@ details p {
     line-height: 1.5;
     margin-top: 16px
 }
+/* 1. Remove the marker in Chromium, Safari, Edge (WebKit/Blink) */
+details summary::-webkit-details-marker {
+  display: none;          /* hides the default triangle */
+}
+
+/* 2. Remove the marker in Firefox */
+details summary::marker {
+  content: "";            /* override the built‑in glyph */
+}
+
+/* 3. Optional tidy‑up */
+details > summary {
+  list-style: none;       /* stops fallback bullets in very old browsers */
+  cursor: pointer;        /* keeps the clickable affordance */
+  /* add your own icon… */
+  /* background: url("my‑icon.svg") no-repeat 0 50%; */
+  /* padding-left: 1.2rem; */
+}
 
 
