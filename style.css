@@ -363,13 +363,14 @@ nav a{
     border: none;
     background-color: #ff0000;
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .contact-us-button:hover{
     background-color: hsla(0, 100%, 50%, 0.69);
 }
 .contact-us-button p{
-    text-wrap: nowrap;
     color: white;
     width: auto;
     font-weight: 500;
