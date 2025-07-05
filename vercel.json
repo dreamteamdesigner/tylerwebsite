@@ -1,9 +1,9 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/Reviews", "destination": "/Reviews.html" },
-    { "source": "/demo", "destination": "/demo.html" },
-    { "source": "/keylogger", "destination": "/keylogger.html" },
-    { "source": "/verification", "destination": "/verification.html" }
+  "redirect": [
+    { "source": "/", "destination": "/index.html", "permanent": true },
+    { "source": "/Reviews", "destination": "/Reviews.html", "permanent": true },
+    { "source": "/demo", "destination": "/demo.html", "permanent": true },
+    { "source": "/keylogger", "destination": "/keylogger.html", "permanent": true },
+    { "source": "/verification", "destination": "/verification.html", "permanent": true }
   ]
 }
