@@ -5,7 +5,8 @@
     font-family: "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-
+    user-select: none;
+    scroll-behavior: smooth;
 }
 input::placeholder{
     color: hsla(0, 0%, 100%, 0.50);
@@ -205,7 +206,6 @@ img {
     top: 0;
     width: 100%;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     background-color: rgba(20, 0, 0, 0.6);
     z-index: 1;
 }
@@ -1691,3 +1691,118 @@ footer{
     height: 2px;
     width: 20px;
 }
+
+
+
+
+
+
+
+
+
+/* faq */
+.section-7-background{
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 60px;
+    position: relative;
+    width: 100%;
+}
+.section-7-container{
+    align-items: flex-start;
+    display: flex;
+    flex: 1 0 0px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    height: min-content;
+    justify-content: center;
+    max-width: 1000px;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.faq-title{
+    /* background-color: red; */
+    width: 100%;
+    padding: 16px 0;
+}
+.faq-contents{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: min-content;
+    width: 100%;
+    flex: none;
+}
+.line{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+}
+.jkg{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+.question p{
+    color: white;
+    height: 100%;
+    padding-bottom: 6px;
+}
+.answer{
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.5;
+}
+
+.answer{
+    display: none;
+}
+.line:focus-within .answer{
+    display: block;
+}
+
+
+
+
+/* test */
+details{
+    /* background-color: red; */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 28px 0;
+}
+summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    font-size: 16px;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+details[open] summary {
+    transition: all ease 300ms;
+    color: #ffffff; /* Optional: change style when open */
+}
+
+details p {
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.5;
+    margin-top: 16px
+}
+
+
