@@ -353,6 +353,7 @@ a:-webkit-any-link {
 
 nav a{
     text-decoration: none;
+    word-break: keep-all;
 }
 .contact-us-button{
     height: 40px;
