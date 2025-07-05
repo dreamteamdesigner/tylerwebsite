@@ -357,7 +357,6 @@ nav a{
 }
 .contact-us-button{
     height: 40px;
-    width: min-content;
     padding: 0 15px;
     border-radius: 8px;
     outline: none;
