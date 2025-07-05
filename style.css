@@ -363,6 +363,9 @@ nav a{
     border: none;
     background-color: #ff0000;
     cursor: pointer;
+    display: flex;
+    flex-wrap: nowrap;
+
 }
 .contact-us-button:hover{
     background-color: hsla(0, 100%, 50%, 0.69);
