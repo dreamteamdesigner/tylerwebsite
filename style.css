@@ -354,7 +354,7 @@ a:-webkit-any-link {
 nav a{
     text-decoration: none;
 }
-.contact-us-button{
+.contact-us-button, .sec button{
     height: 40px;
     width: min-content;
     padding: 0 15px;
@@ -362,6 +362,11 @@ nav a{
     outline: none;
     border: none;
     background-color: #ff0000;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
 }
 .contact-us-button:hover{
     background-color: hsla(0, 100%, 50%, 0.69);
@@ -371,6 +376,7 @@ nav a{
     color: white;
     font-weight: 500;
     font-size: 16px;
+    word-break: keep-all;
     width: auto;
 }
 
