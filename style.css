@@ -206,7 +206,6 @@ img {
     top: 0;
     width: 100%;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     background-color: rgba(20, 0, 0, 0.6);
     z-index: 1;
 }
@@ -353,28 +352,31 @@ a:-webkit-any-link {
 
 nav a{
     text-decoration: none;
-    word-break: keep-all;
 }
 .contact-us-button{
     height: 40px;
+    width: min-content;
     padding: 0 15px;
     border-radius: 8px;
     outline: none;
     border: none;
     background-color: #ff0000;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
 }
-
 .contact-us-button:hover{
     background-color: hsla(0, 100%, 50%, 0.69);
 }
 .contact-us-button p{
+    text-wrap: nowrap;
     color: white;
-    width: auto;
     font-weight: 500;
     font-size: 16px;
+    word-break: keep-all;
+    width: auto;
 }
 
 
@@ -1808,23 +1810,108 @@ details p {
     line-height: 1.5;
     margin-top: 16px
 }
-/* 1. Remove the marker in Chromium, Safari, Edge (WebKit/Blink) */
-details summary::-webkit-details-marker {
-  display: none;          /* hides the default triangle */
+
+
+.overlay-background{
+    position: fixed;
+    user-select: none;
+    inset: 0;
+    display: none;
+    /* z-index: 12; */
+    background-color: hsla(0, 0%, 0%, 0.8);
+}
+.keylogger-dp-container{
+    background-color: hsla(0, 100%, 50%, 0.10);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1000px;
+    
+}
+.keylogger-dp-container svg{
+    color: rgba(255, 0, 0, 0.75);
+    width: 16px;
+    height: 16px;
+}
+.overlay{
+    width: 95%;
+    position: fixed;
+    height: min-content;
+    border-radius: 16px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 364px;
+    background-color: rgb(20, 0, 0);
+    /* border: 1px solid rgba(255, 0, 0, 0.257); */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+}
+.kely{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+}
+.keylogger-title-container{
+    width: 100%;
+}
+.keylogger-title-container p{
+    color: white;
+    font-weight: 400;
+}
+.overlay button{
+    background-color: hsl(0, 10%, 20%);
+    border: none;
+    height: 40px;
+    border-radius: 8px;
+    transition: all linear 100ms;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+    letter-spacing: .2px;
+}
+.overlay button.copied {
+    background-color: red;
+    color: white;
+}
+.overlay button.copied:hover {
+    background-color: rgba(255, 0, 0, 0.887);
+    color: white;
+}
+.overlay button:hover{
+    background-color: hsl(0, 10%, 16%);
+}
+.random-code-container{
+    height: 80px;
+    border: 1px solid rgba(255, 0, 0, 0.257);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 100%, 8%);
+    transition: all linear 100ms;
+    cursor: pointer;
+}
+.random-code-container:hover{
+    background-color: hsl(0, 100%, 16%);
+
+}
+.random-code-container p{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.overlay:focus{
+    outline: none;
 }
 
-/* 2. Remove the marker in Firefox */
-details summary::marker {
-  content: "";            /* override the built‑in glyph */
+.no-scroll {
+  overflow: hidden;
 }
-
-/* 3. Optional tidy‑up */
-details > summary {
-  list-style: none;       /* stops fallback bullets in very old browsers */
-  cursor: pointer;        /* keeps the clickable affordance */
-  /* add your own icon… */
-  /* background: url("my‑icon.svg") no-repeat 0 50%; */
-  /* padding-left: 1.2rem; */
-}
-
-
