@@ -1,3 +1,34 @@
+.demo-title h2{
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 28px;
+    font-style: normal;
+    line-height: 1.5em;
+    font-weight: 500;
+    /* letter-spacing: -.2px; */
+}
+/* .demo-supporting-text{
+    background-color: rebeccapurple;
+    width: 100%;
+} */
+.listings h3{
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 1.5em;
+    font-weight: 500;
+    /* letter-spacing: -.2px; */
+}
+.bbn p{
+    font-size: 16px;
+}
+ul{
+    /* list-style: dot; */
+    list-style-type: circle;
+}
 .reviews-background{
     place-content: center;
     align-items: center;
@@ -224,7 +255,7 @@ select:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(14, 196, 132);
+    background-color: hsl(0, 100%, 50%, 0.10);
 }
 .user-name{
     display: flex;
@@ -250,8 +281,9 @@ select:hover{
     color: hsla(0, 0%, 100%, 0.5);
 }
 .review-info{
-    font-weight: 300;
+    font-weight: 400;
     color: #ccc;
+    line-height: 1.5;
 }
 .contents-rev{
     display: flex;
@@ -289,4 +321,14 @@ label button{
 
 label button:hover{
     background-color: hsla(0, 100%, 50%, 0.097);
+}
+.reply{
+    background-color: hsl(0, 100%, 4%);
+    border-radius: 12px;
+    /* background-color: red; */
+}
+.reply:hover{
+    background-color: hsl(0, 100%, 4%);
+    /* background-color: #290000; */
+    /* background-color: red; */
 }
