@@ -367,6 +367,7 @@ nav a{
     background-color: hsla(0, 100%, 50%, 0.69);
 }
 .contact-us-button p{
+    text-wrap: nowrap;
     color: white;
     font-weight: 500;
     font-size: 16px;
