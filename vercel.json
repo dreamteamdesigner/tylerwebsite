@@ -1,9 +1,8 @@
 {
-  "redirects": [
-    { "source": "/", "destination": "/index.html", "permanent": true },
-    { "source": "/Reviews", "destination": "/Reviews.html", "permanent": true },
-    { "source": "/demo", "destination": "/demo.html", "permanent": true },
-    { "source": "/keylogger", "destination": "/keylogger.html", "permanent": true },
-    { "source": "/verification", "destination": "/verification.html", "permanent": true }
+  "rewrites": [
+    {
+      "source": "/:path",
+      "destination": "/:path.html"
+    }
   ]
 }
