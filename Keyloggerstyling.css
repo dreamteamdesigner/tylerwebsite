@@ -283,3 +283,35 @@ h2 span{
     position: relative;
     width: auto;
 }
+.password{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.password input{
+    height: 40px;
+    border: 1px solid #5a0000;
+    outline: none;
+    border-radius: 10px;
+    background-color: #290000;
+    padding: 12px;
+    color: white;
+    /* text-align: center; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.kxy{
+    text-align: center;
+}
+.topy{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.folu{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
