@@ -362,19 +362,23 @@ nav a{
     outline: none;
     border: none;
     background-color: #ff0000;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    justify-content: center;
 }
 .contact-us-button:hover{
     background-color: hsla(0, 100%, 50%, 0.69);
 }
 .contact-us-button p{
-    white-space: nowrap;
     text-wrap: nowrap;
     color: white;
     font-weight: 500;
     font-size: 16px;
     word-break: keep-all;
     width: auto;
+    width: f;
 }
 
 
@@ -1384,6 +1388,7 @@ nav a{
 }
 form{
     margin-top: 0em;
+
     unicode-bidi: isolate;
 }
 .input-container{
@@ -1820,8 +1825,9 @@ details p {
 }
 .keylogger-dp-container{
     background-color: hsla(0, 100%, 50%, 0.10);
-    width: 32px;
-    height: 32px;
+    /* width: 40px; */
+    /* height: 40px; */
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1843,10 +1849,10 @@ details p {
     transform: translateX(-50%);
     max-width: 364px;
     background-color: rgb(20, 0, 0);
-    /* border: 1px solid rgba(255, 0, 0, 0.257); */
+    border: 1px solid rgba(255, 0, 0, 0.143);
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 16px;
     gap: 16px;
     animation: fadeIn 100ms ease-in forwards;
 }
@@ -1865,13 +1871,16 @@ details p {
     align-items: center;
     flex-direction: row;
     gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.059);
+    padding-bottom: 12px;
 }
 .keylogger-title-container{
     width: 100%;
 }
 .keylogger-title-container p{
     color: white;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 18px;
 }
 .overlay button{
     background-color: hsl(0, 10%, 20%);
@@ -1924,4 +1933,20 @@ details p {
 
 .no-scroll {
   overflow: hidden;
+}
+.suppo{
+    color: hsla(0, 0%, 100%, 0.7);
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+}
+.suppo a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    width: 100%;
+}
+.ver{
+    display: block;
 }
