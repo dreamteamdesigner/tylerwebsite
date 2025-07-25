@@ -314,4 +314,20 @@ h2 span{
     flex-direction: column;
     gap: 2px;
 }
+.button-twos{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.button-twos button{
+    width: 100%;
+    height: 40px;
+}
+.button-twos button:hover{
+    opacity: .8;
+}
+.button-twos button:first-child{
+    background-color: hsla(4, 50%, 50%);
+}
+
 
