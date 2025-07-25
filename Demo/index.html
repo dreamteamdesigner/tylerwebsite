@@ -160,10 +160,30 @@
     </div>
 
 
+    <div class="overlay-background" style="display: flex;">
+        <div class="overlay" tabindex="1">
+            <div class="kely">
+                <div class="keylogger-title-container">
+                    <p class="overlay-title" style="opacity: .5">Note</p>
+                </div>
+            </div>
+                <p class="random-text" style="color: white; font-weight: 300; line-height: 1.4;">The Blurred tab on the bottom center of the video contains the encrypted link of this client, this is for the client's protection and privacy purposes</p>
 
+            
+            <button class="close-btn" onclick="closeOverlayMessage()">
+                Close
+            </button>
+        </div>
+    </div>
 
 
     <script src="/nav-function.js"></script>
-
+    <script>
+        const closeBtn = document.querySelector('.close-btn')
+        const over = document.querySelector('.overlay-background')
+        function closeOverlayMessage() {
+            over.style.display = "none";
+        }
+    </script>
 </body>
 </html>
