@@ -28,9 +28,11 @@ tileButtons.forEach(button => {
     button.addEventListener("click", () => {
         document.body.classList.add('no-scroll');
         const overlayTitle = overlay.querySelector(".overlay-title");
+        const overlayTitle2 = overlay.querySelector(".overlay-title2");
         const tile = button.closest(".tile");
         const title = tile.querySelector(".stander p")?.textContent || "No title";
         overlayTitle.textContent = title;   
+        overlayTitle2.textContent = ' Enter your ' + title + ' info';   
         const code = generateCode();
         document.querySelector('.random-text').textContent = code;
         overlay.style.display = "block";
@@ -43,6 +45,9 @@ overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
     document.body.classList.remove('no-scroll');
     overlay.style.display = "none";
+    randomCodeContainer.style.display = "none"
+    inputText.style.display = 'block';
+    btwo.style.display = "flex"
     }
 });
 
@@ -50,6 +55,9 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
     document.body.classList.remove('no-scroll');
     overlay.style.display = "none";
+    inputText.style.display = 'block';
+    randomCodeContainer.style.display = "none"
+    btwo.style.display = "flex"
     }
 });
 });
