@@ -273,7 +273,6 @@ nav{
 }
 a:-webkit-any-link {
     cursor: pointer;
-    text-decoration: underline;
 }
 .logolink{
     aspect-ratio: 1 / 1;
