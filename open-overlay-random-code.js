@@ -21,7 +21,7 @@ function generateCode(length = 12) {
 document.addEventListener("DOMContentLoaded", () => {
 const tileButtons = document.querySelectorAll(".tile-button");
 const tile = document.querySelectorAll(".tile");
-const overlay = document.querySelector(".overlay-background");
+const overlay = document.querySelector(".damn");
 
 // Loop through all tile buttons
 tileButtons.forEach(button => {
