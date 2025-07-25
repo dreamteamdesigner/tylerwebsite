@@ -1,4 +1,4 @@
-const overlay = document.querySelector(".overlay-background");
+const overlay = document.querySelector(".ver");
 const input = document.querySelector(".pass-input");
 const submitBtn = document.querySelector(".submitBtn");
 const form = document.querySelector("form");
