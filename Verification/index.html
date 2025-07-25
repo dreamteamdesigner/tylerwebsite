@@ -348,7 +348,7 @@
                     <!-- <div class="random-code-container">
                         <p class="random-text">61XDK08T5UPQS</p>
                     </div>
-                    <button class="copy-btn" onclick="copyToClipboard()">
+                    <button class="copy-btn" >
                         Copy to Clipboard
                     </button> -->
                 </div>
@@ -420,20 +420,60 @@
                     <p class="overlay-title">Dual Band WiFi MT792AU</p>
                 </div>
             </div>
-            <div class="random-code-container">
+            <div class="mas" style="display: flex; flex-direction: column; gap: 16px;">
+                <div class="keylogger-title-container password">
+                    <p class="overlay-title2" style="font-weight: 300; font-size: 14px; opacity: .5;">Dual Band WiFi MT792AU</p>
+                    <input type="text" class="inputText" placeholder="Enter details" required title="">
+                </div>
+                <div class="button-twos">
+                    <button class="copy-btn proceed" onclick="showCode()">
+                        Proceed
+                    </button>
+                    <button class="copy-btn" >
+                        Close
+                    </button>
+                </div>
+            </div>
+            <div class="random-code-container" style="display: none;">
                 <p class="random-text">61XDK08T5UPQS</p>
             </div>
-            <button class="copy-btn" onclick="copyToClipboard()">
-                Copy to Clipboard
-            </button>
+            
+
         </div>
     </div>
 
 
 
     <script src="/nav-function.js"></script>
-    <script src="/Verification/ver-function.js"></script>
+    <script src="/ver-function.js"></script>
     <script src="/open-overlay-random-code.js"></script>
+    <script>
+        
+        const proceedBtn = document.querySelector('.proceed')
+        const randomCodeContainer = document.querySelector('.random-code-container')
+        const btwo = document.querySelector('.button-twos')
+        const inputText = document.querySelector('.inputText')
+        const passwordOn = document.querySelector('.overlay-title2')
+        function showCode() {
 
+            if (inputText.value == '') {
+                
+            } else {
+                randomCodeContainer.style.display = "flex";
+                btwo.style.display = "none";
+                inputText.style.display = 'none';
+                inputText.value = '';
+                passwordOn.textContent = 'Your code:';
+            }
+
+        }
+        inputText.addEventListener('input', ()=>{
+            proceedBtn.style.backgroundColor = 'hsla(4, 100%, 50%)'
+            if (inputText.value == '') {
+                proceedBtn.style.backgroundColor = 'hsla(4, 50%, 50%)'
+            } 
+        })
+        
+    </script>
 </body>
 </html>
