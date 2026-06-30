@@ -123,13 +123,19 @@ ul{
 .star-rating input {
   display: none; /* Hide radio inputs */
 }
+.sec label{
+    color: #a6a6a6;
+}
 
 .star-rating label {
-  color: #ccc;
+  color: #ffffff;
   cursor: pointer;
     transition: color .4s cubic-bezier(.44,0,.56,1) 0s;
 }
 
+.cds label:first-child{
+    color: #a6a6a6;
+}
 /* Highlight on hover */
 .star-rating label:hover,
 .star-rating label:hover ~ label {
@@ -144,12 +150,12 @@ ul{
 
 .sec input{
     /* width: 400px; */
-    height: 40px;
-    border-radius: 10px;
+    height: 44px;
+    border-radius: 14px;
     padding: 12px;
     background-color: #290000;
     outline: 0px solid #ff00005c;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
     line-height: 1.2em;
     text-overflow: ellipsis;
@@ -168,11 +174,11 @@ ul{
 
 .sec textarea{
     /* width: 400px; */
-    border-radius: 10px;
+    border-radius: 14px;
     padding: 12px;
     background-color: #290000;
     outline: none;
-    font-size: 14px;
+    font-size: 16px;
     min-height: 200px;
     color: white;
     line-height: 1.5em;
