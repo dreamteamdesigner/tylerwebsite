@@ -125,6 +125,7 @@ ul{
 }
 .sec label{
     color: #a6a6a6;
+    font-size: 14px;
 }
 
 .star-rating label {
@@ -135,6 +136,7 @@ ul{
 
 .cds label:first-child{
     color: #a6a6a6;
+    font-size: 14px;
 }
 /* Highlight on hover */
 .star-rating label:hover,
@@ -152,7 +154,7 @@ ul{
     /* width: 400px; */
     height: 44px;
     border-radius: 14px;
-    padding: 12px;
+    padding: 0 16px;
     background-color: #290000;
     outline: 0px solid #ff00005c;
     font-size: 16px;
@@ -175,7 +177,7 @@ ul{
 .sec textarea{
     /* width: 400px; */
     border-radius: 14px;
-    padding: 12px;
+    padding: 12px 16px;
     background-color: #290000;
     outline: none;
     font-size: 16px;
