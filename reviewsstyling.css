@@ -173,11 +173,17 @@ ul{
     background-color: #290000;
     outline: none;
     font-size: 14px;
-    min-height: 100px;
+    min-height: 200px;
     color: white;
-    line-height: 1.2em;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    line-height: 1.5em;
+
+    resize: vertical;      /* Optional */
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
     transition: outline linear 100ms;
     border: 1px solid #290000;
     transition: color .4s cubic-bezier(.44,0,.56,1) 0s;
@@ -229,6 +235,7 @@ select:hover{
     flex-direction: column;
     transition: color .4s cubic-bezier(.44,0,.56,1) 0s;
     gap: 16px;
+    transition: all ease-in 300ms;
 }
 .review:hover{
     background-color: hsl(0, 100%, 12%);
@@ -270,6 +277,7 @@ select:hover{
 .small-email{
     font-size: 12px;
     color: hsla(0, 0%, 100%, 0.5);
+    text-transform: lowercase;
 }
 .nnh{
     display: flex;
