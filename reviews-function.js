@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const text   = document.getElementById('textarea')?.value.trim();
     const rating = form.querySelector('input[name="rating"]:checked')?.value;
 
-    if (!name || !email || !text || !rating) {
+    if (!name || !email || !rating) {
       alert('Fill every field and choose a star rating.');
       return;
     }
