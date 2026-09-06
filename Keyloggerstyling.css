@@ -180,6 +180,7 @@ h2 span{
     border-radius: 12px;
     display: flex;
     flex: 0 0 auto;
+    aspect-ratio: 1;
     flex-flow: row;
     gap: 10px;
     height: min-content;
