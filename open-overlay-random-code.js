@@ -26,7 +26,7 @@ const overlay = document.querySelector(".damn");
 // Loop through all tile buttons
 tileButtons.forEach(button => {
     button.addEventListener("click", () => {
-        document.body.classList.add('no-scroll');
+        // document.body.classList.add('no-scroll');
         const overlayTitle = overlay.querySelector(".overlay-title");
         const overlayTitle2 = overlay.querySelector(".overlay-title2");
         const tile = button.closest(".tile");
