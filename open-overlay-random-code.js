@@ -26,6 +26,7 @@ const overlay = document.querySelector(".damn");
 // Loop through all tile buttons
 tileButtons.forEach(button => {
     button.addEventListener("click", () => {
+        overlay.style.display = "flex";
         // document.body.classList.add('no-scroll');
         const overlayTitle = overlay.querySelector(".overlay-title");
         const overlayTitle2 = overlay.querySelector(".overlay-title2");
@@ -35,7 +36,6 @@ tileButtons.forEach(button => {
         overlayTitle2.textContent = ' Enter your ' + title + ' info';   
         const code = generateCode();
         document.querySelector('.random-text').textContent = code;
-        overlay.style.display = "block";
         overlay.querySelector(".overlay").focus(); // optional: focus for keyboard users
     });
 });
