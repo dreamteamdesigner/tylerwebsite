@@ -1824,7 +1824,7 @@ details p {
     user-select: none;
     inset: 0;
     display: none;
-    /* z-index: 12; */
+    z-index: 22;
     background-color: hsla(0, 0%, 0%, 0.8);
 }
 .keylogger-dp-container{
